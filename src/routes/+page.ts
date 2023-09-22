@@ -21,15 +21,16 @@ export async function load({ fetch, depends }: LoadEvent) {
 	query.subscribe((value) => {
 		queryData = value;
 	});
-    const response: returnType = await (
+    const response: any = (
         await fetch('/', {
             method: 'POST',
             body: JSON.stringify({ ...queryData })
         })
-    ).json();
+    );
+    console.log(response);
     return {
         query,
-        response
+        response: await response.json()
     };
 };
 
