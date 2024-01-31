@@ -16,7 +16,7 @@ Install the depedencies:
 npm install
 ```
 
-# Build & Preview
+## Build & Preview
 First, build a production version of the app:
 ```
 npm run build
